@@ -1,0 +1,159 @@
+
+
+
+html {
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: beige;
+}
+
+h1 {
+    text-align: center;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    background-color: lightgrey;
+    border-radius: 25px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+    align-self: end;
+}
+
+.top-nav-left {
+    display: inline;
+    max-width: 25%;
+    font-size: small;
+    text-align: left; 
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.bottom-nav {
+    align-self: start;
+    font-size: xxx-large;
+    text-align: center;
+    padding-bottom: .5em;
+}
+
+.shop{
+    font-size: medium;
+}
+
+.shopping-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
+.shopping-items a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    padding: .2em;
+    border-radius: 25px;
+}
+
+.shopping-items :hover {
+    background-color: beige;
+}
+
+
+.icons {
+    background-color: none;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    border-radius: 12px;
+    padding: .5em;
+
+}
+
+.top-nav-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+
+}
+
+/*.stacked {
+    display: grid;
+}
+
+.stacked > * {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    rgb(25, 68, 97)
+}*/
+
+.cards {
+    margin: 1.5em;
+    display: grid;
+    gap: 1em;
+    /*the autofit funcion works best, I defined the four columns to meet the criteria for the assignment*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: repeat (5, 1fr);
+    /*grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));*/
+    /* could also use grid-template-columns: repeat (4, 1fr); ---> instead of 1fr(fr stand for fraction) */
+}
+
+.coffee_name {
+    position: top;
+    align-items: center;
+    font-size: x-large;
+    color: yellow;
+    /*I added the following becuase I was not sure if they would want this part of the cell to be clickable*/
+    cursor: pointer;
+}
+
+.card_img{
+    border-radius: 25px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+ }
+
+ /* do the foloowing hot pink border to visulaize where the grid layout is*/
+.card {
+    border-radius: 25px;
+    position: relative;
+    background-color: rgb(25, 68, 97);
+    /*border: 3px solid hotpink;*/
+    padding: 2em;
+}
+
+.text_box {
+    border-radius: 25px;
+    position: last;
+    padding: .5rem;
+    background-color:  rgb(77, 199, 183);
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cookies {
+    display: flex;
+    gap: 1em;   
+    align-items: baseline;
+}
+
+.button {
+    background-color: rgb(25, 68, 97);
+    border: none;
+    color: white;
+    display: inline-block;
+    border-radius: 12px;
+    padding: .5em 1em;
+    cursor: pointer;
+}
